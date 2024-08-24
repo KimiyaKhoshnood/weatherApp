@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="weatherBox">
+      <div class="weatherSearch">
+        <span><img src="./Media/location-svg.svg" alt="" /></span>
+        <input type="text" placeholder="ENTER CITY" oninput="this.value = this.value.toUpperCase()" />
+        <button id="search"><img src="./Media/search-svg.svg" alt="" /></button>
+      </div>
+
+      <div id="weatherInfo" class="notActive">
+        <h2 id="cityName"></h2>
+        <div class="imgWeather">
+          <img src="./Media/sun-behind-rain-cloud.png" alt="" />
+        </div>
+        <h2 id="degree">40 <span>°C</span></h2>
+        <span id="aboutWeather">clouds</span>
+        <div class="bottomItems">
+          <div>
+            <div><img src="./Media/humidity-svg.svg" alt="" /></div>
+            <div>
+              <h3 id="humidity">55%</h3>
+              <span>Humadity</span>
+            </div>
+          </div>
+          <div>
+            <div><img src="./Media/wind-svg.svg" alt="" /></div>
+            <div>
+              <h3 id="windSpeed">0</h3>
+              <span>wind speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="snackbar">Unvalid city name</div>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
